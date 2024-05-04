@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+
+<h1>Function parameter with return keyword</h1>
+<input type="number" id="first" placeholder="First Number">
+<input type="number" id="second" placeholder="Second Number">
+<button id="btn" onclick="return first()">submit</button>
+
+<h3>This is a addition</h3>
+<small id="add"></small>
+
+<h3>This is a subtration</h3>
+<small id="sub"></small>
+
+<h3>This is a multiply</h3>
+<small id="mult"></small>
+
+<h3>This is a division</h3>
+<small id="divide"></small>
+<script>
+   function first (){
+        let firstInput = Number(document.getElementById("first").value);
+        let secondInput = Number(document.getElementById("second").value);
+        // this is a addition code with return
+        let small = document.getElementById("add");
+        let c = addition(firstInput, secondInput);
+        small.innerHTML = c;
+        //this is a subtration with return
+        let smallTwo = document.getElementById("sub");
+        let d = subtration(firstInput, secondInput);
+        smallTwo.innerHTML = d;
+        //this is a multiply with return
+        let smallThree = document.getElementById("mult")
+        let e = multiply(firstInput, secondInput);
+        smallThree.innerHTML = e;
+        //this is a division with return
+        let smallFour = document.getElementById("divide");
+        let f = division(firstInput, secondInput);
+        smallFour.innerHTML = f;
+    }
+
+    function addition(firstInput, secondInput){ 
+       let z = firstInput+secondInput;
+       return z;
+    }
+
+    function subtration(firstInput, secondInput){ 
+       let y = firstInput-secondInput;
+       return y;
+    }
+
+    function multiply(firstInput, secondInput){ 
+       let x = firstInput*secondInput;
+       return x;
+    }
+
+    function division(firstInput, secondInput){ 
+       let w = firstInput/secondInput;
+       return w;
+    }
+</script>
+</body>
+</html>
